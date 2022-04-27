@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import GlobalComponent from './components/GlobalComponent.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+// Registra o camponente para ser utilizado Globalmente
+app.component('GlobalComponent', GlobalComponent)
+app.mount('#app')
